@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
+#include <stdlib.h>
 
 // extern char get_first_char(const char *str);
 // extern char get_second_char(const char *str);
@@ -14,12 +15,14 @@
 // extern int ft_write(int fd, const void *buf, size_t count);
 // extern int basic_ft_read(int fd, const void *buf, size_t count);
 // extern int ft_read(int fd, const void *buf, size_t count);
-extern void *my_alloc(size_t size);
+// extern void *my_alloc(size_t size);
+extern char *ft_strdup(char *s);
 
 
 int main(void)
 {
-	char *test_str;
+	char *test_str = "42 Kocaeli";
+	char *test_str2;
 	// char test_str2[10] = "Hellb";
 	// char *test_str2 = "";
 	// char result = get_first_char(test_str);
@@ -28,14 +31,8 @@ int main(void)
 	// printf("String1: %s\n", test_str);
 	// printf("String2: %s\n", test_str2);
 	// int ret = ft_read(-1, test_str, 10);
-
-	test_str = my_alloc(10);
-	for (int i = 0; i < 10; i++)
-	{
-		test_str[i] = i + 48;
-	}
-	test_str[10] = '\0';
-	printf("Value in str -> %s\n", test_str);
+	test_str2 = ft_strdup(test_str);
+	printf("Value in dupped str -> %s\n", test_str2);
 	printf("--------------------\n");
 	// printf("Return value: %d (Expected: -1)\n", ret);
 	// printf("Errno code:   %d (Expected: 9)\n", errno);
@@ -44,6 +41,6 @@ int main(void)
 	// printf("isEmpty?: %d\n", is_empty_string(test_str2));
 	// printf("First character: %c\n", result);
 	// printf("Second character: %c\n", result);
-
+	free(test_str2);
 	return 0;
 }
