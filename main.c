@@ -11,11 +11,12 @@
 // extern char *ft_strcpy(char *dest, char *src);
 // extern int diff_first_char(char *s1, char *s2);
 // extern int ft_strcmp(char *s1, char *s2);
-extern int ft_write(int fd, const void *buf, size_t count);
+// extern int ft_write(int fd, const void *buf, size_t count);
+extern int basic_ft_read(int fd, const void *buf, size_t count);
 
 int main(void)
 {
-	char test_str[10] = "Hello";
+	char test_str[10] = "";
 	// char test_str2[10] = "Hellb";
 	// char *test_str2 = "";
 	// char result = get_first_char(test_str);
@@ -23,11 +24,12 @@ int main(void)
 
 	// printf("String1: %s\n", test_str);
 	// printf("String2: %s\n", test_str2);
-	int ret = ft_write(-1, test_str, 10);
+	basic_ft_read(0, test_str, 10);
+	printf("Value in str -> %s\n", test_str);
 	printf("--------------------\n");
-	printf("Return value: %d (Expected: -1)\n", ret);
-	printf("Errno code:   %d (Expected: 9)\n", errno);
-	printf("Error msg:    %s\n", strerror(errno));
+	// printf("Return value: %d (Expected: -1)\n", ret);
+	// printf("Errno code:   %d (Expected: 9)\n", errno);
+	// printf("Error msg:    %s\n", strerror(errno));
 	// printf("String2: %s\n", test_str2);
 	// printf("isEmpty?: %d\n", is_empty_string(test_str2));
 	// printf("First character: %c\n", result);
