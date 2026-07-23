@@ -5,7 +5,8 @@
 // extern char is_empty_string(const char *str);
 // extern char ft_strlen(const char *str);
 // extern char copy_one_char(char *dest, char *src);
-extern char *ft_strcpy(char *dest, char *src);
+// extern char *ft_strcpy(char *dest, char *src);
+extern int diff_first_char(char *s1, char *s2);
 
 int main(void)
 {
@@ -17,7 +18,7 @@ int main(void)
 
 	printf("String1: %s\n", test_str);
 	printf("String2: %s\n", test_str2);
-	printf("String Func: %s\n", ft_strcpy(test_str, test_str2));
+	printf("Diff: %d\n", diff_first_char(test_str, test_str2));
 	printf("--------------------\n");
 	// printf("String2: %s\n", test_str2);
 	// printf("isEmpty?: %d\n", is_empty_string(test_str2));
