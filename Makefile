@@ -8,7 +8,7 @@ NASM_FMT	= elf64
 ASM			= nasm
 ASMFLAGS	= -f $(NASM_FMT)
 
-SRC_ASM		= get_first_char.s get_second_char.s is_empty_string.s ft_strlen.s
+SRC_ASM		= get_first_char.s get_second_char.s is_empty_string.s ft_strlen.s copy_one_char.s
 OBJ_ASM		= $(SRC_ASM:.s=.o)
 
 all: $(NAME)
