@@ -10,7 +10,7 @@ ASMFLAGS	= -f $(NASM_FMT)
 
 SRC_ASM		= get_first_char.s get_second_char.s is_empty_string.s \
 			  ft_strlen.s copy_one_char.s ft_strcpy.s diff_first_char.s \
-			  ft_strcmp.s
+			  ft_strcmp.s basic_ft_write.s ft_write.s
 
 OBJ_ASM		= $(SRC_ASM:.s=.o)
 
